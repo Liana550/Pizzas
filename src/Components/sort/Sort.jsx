@@ -40,6 +40,7 @@ function Sort() {
   const [open, setOpen] = useState(false);
   const sortRef = useRef(null);
   const dispach = useDispatch();
+
   useEffect(() => {
     const mouseclick = (e) => {
       const path = e.composedPath ? e.composedPath() : e.path;

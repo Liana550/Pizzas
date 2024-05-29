@@ -4,6 +4,7 @@ function PizzaSize({ el, style, setStyle, sizes }) {
   const handleStyle = useCallback((arg) => {
     setStyle(arg);
   }, []);
+
   return (
     <li
       className={
