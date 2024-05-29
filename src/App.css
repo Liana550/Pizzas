@@ -1,0 +1,668 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #0a0101;
+}
+
+img {
+  max-width: 100%;
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url(./assets/fonts/proximanova_black.otf);
+}
+.App {
+  font-family: "ProximaNova";
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  background: #ffdf8c;
+}
+
+.app_content {
+  position: relative;
+  max-width: 1340px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: #ffffff;
+}
+/*....... header........ */
+.header {
+  width: 100%;
+  position: relative;
+  padding: 50px 40px 30px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.header::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #f6f6f6;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.headerLogo {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.headerLogo:hover {
+  cursor: pointer;
+}
+.header h2 {
+  color: #181818;
+  margin-bottom: 0;
+}
+.header p {
+  color: #7b7b7b;
+  font-size: 16px;
+  margin-top: 0;
+}
+.headerRight {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+.headerRight input {
+  width: 250px;
+  outline: none;
+  height: 40px;
+  padding: 10px 10px 10px 20px;
+  border: 2px solid #fe5f1e;
+  border-radius: 10px;
+}
+.headerRight input:hover {
+  cursor: text;
+}
+.serchParent {
+  position: relative;
+}
+.deleteInp {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.deleteInp:hover {
+  cursor: pointer;
+}
+.search {
+  position: relative;
+}
+.iconSearch {
+  position: absolute;
+  left: 3px;
+  top: 7px;
+  color: #7b7b7b;
+}
+.headerButton {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  background: #fe5f1e;
+  color: white;
+}
+.headerButton:hover {
+  cursor: pointer;
+}
+.headerButton::after {
+  content: "";
+  width: 1px;
+  height: 25px;
+  position: absolute;
+  background: #ffffff;
+  opacity: 25%;
+  left: 55%;
+}
+.buttonCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+/*......... header end...... */
+/*.......... content start.......... */
+.content .categoria {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+/*......... content type start.......... */
+.content {
+  padding: 30px 50px;
+}
+.contentMenu ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.contentMenu li {
+  font-size: 16px;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background: #f9f9f9;
+  color: #2c2c2c;
+  transition: all 0.2s ease-in;
+}
+.contentMenu li:hover {
+  cursor: pointer;
+  background: #282828;
+  color: #ffffff;
+}
+.contentMenu li.active {
+  background-color: #282828;
+  color: #ffffff;
+}
+/* .....content type end....... */
+/*.......... content sort start.......... */
+.sortParent {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.sortParent .firstText {
+  font-weight: bold;
+  font-size: 14px;
+}
+.sortParent:hover {
+  cursor: pointer;
+}
+.sortParent .filter {
+  color: #fe5f1e;
+  font-size: 14px;
+  padding-bottom: 5px;
+  border-bottom: 1px dotted #fe5f1e;
+}
+.sortList {
+  position: absolute;
+  width: 132px;
+  height: 356px;
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 14px;
+  padding: 10px 0;
+  bottom: -365px;
+  right: 0;
+  box-shadow: 0 0 0 2px #f6f6f6;
+  z-index: 2;
+}
+.sortList ul {
+  list-style-type: none;
+}
+.sortList li {
+  padding: 10px;
+  transition: all 0.2s ease-in;
+}
+.sortList li:hover {
+  background: #fe5f1e0d;
+  cursor: pointer;
+  color: #fe5f1e;
+  font-weight: bold;
+}
+.sortList li.active {
+  background: #fe5f1e0d;
+  color: #fe5f1e;
+  font-weight: bold;
+}
+/* .....content sort end ......*/
+/*...... products........ */
+.products h1 {
+  margin: 30px 0;
+}
+.pizza {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+.pageBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.pageBox ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+.pageBox li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #eb5a1e;
+  border-radius: 5px;
+  transition: all 0.3s ease-in;
+}
+.pageBox li > a:hover {
+  cursor: pointer;
+  background: #eb5a1e;
+  color: white;
+}
+.pageBox li.active > a {
+  border-radius: 5px;
+  background: #eb5a1e;
+  color: white;
+}
+/* ...........pizzaBlock start......... */
+.pizzaBlock {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+}
+.pizzaName {
+  font-size: 20px;
+  font-weight: 800;
+}
+.pizzaBlock .pizzaImg {
+  text-align: center;
+  transition: all 0.3s ease-in;
+}
+.pizzaBlock .pizzaImg:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+.pizzaSort {
+  width: 100%;
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  background: #f3f3f3;
+  border-radius: 10px;
+  padding: 5px;
+}
+.pizzaBlock ul {
+  list-style-type: none;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+.pizzaBlock_type li {
+  flex-basis: 50%;
+}
+.pizzaBlock_sizes li {
+  flex-basis: 33%;
+}
+.pizzaBlock li {
+  font-size: 14px;
+  height: 32px;
+  font-weight: 700;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff64;
+  color: #2c2c2c;
+  transition: all 0.2s ease-in;
+}
+.pizzaBlock li:hover {
+  cursor: pointer;
+  background: white;
+}
+.pizzaBlock li.active {
+  background: white;
+}
+.pizzaBlock li.disebled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+.pizzaBlock_price {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.pizzaBlock_price .price {
+  font-size: 22px;
+  font-weight: 700;
+}
+.countButton {
+  width: 132px;
+  border-radius: 30px;
+  height: 40px;
+  border: 1px solid #eb5a1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 700;
+  color: #eb5a1e;
+  transition: all 0.2s ease-in;
+}
+.countButton:hover {
+  cursor: pointer;
+  color: white;
+  background: #fe5f1e;
+}
+.countButton:hover path {
+  fill: #f3f3f3;
+}
+.count {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #eb5a1e;
+  color: white;
+}
+.countButton:hover .count {
+  background: white;
+  color: #eb5a1e;
+}
+/* ........notFound..... */
+.notFound {
+  padding: 50px;
+  text-align: center;
+  font-size: 24px;
+}
+/* .......fullPizza...... */
+.fullPizza .pizzaText {
+  flex-basis: 50%;
+}
+.fullPizza ul {
+  margin: 10px 0;
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+.fullPizza li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}
+.fullPizza .size li {
+  width: 80px;
+}
+.fullPizza li:hover {
+  cursor: pointer;
+  background-color: #0a0101;
+  color: #f6f6f6;
+}
+.fullPizza li.active {
+  background-color: #0a0101;
+  color: #f6f6f6;
+}
+.fullPizza li.disebled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+.fullPizza button {
+  width: 180px;
+  height: 40px;
+  border-radius: 30px;
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+  background: #282828;
+  transition: all 0.2s ease-in;
+}
+.fullPizza button:hover {
+  cursor: pointer;
+  background-color: #7b7b7b;
+}
+/* .......Modal..... */
+.modal {
+  color: white;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: 1s ease-in;
+}
+.modalContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.modalDelete {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.modalDelete:hover {
+  cursor: pointer;
+}
+.modalDelete path {
+  fill: white;
+}
+/* ..........cart......... */
+.cart {
+  max-width: 821px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.cartText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartContent {
+  max-width: 547px;
+  color: #777777;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.cart button {
+  width: 210px;
+  height: 46px;
+  border-radius: 30px;
+  margin-top: 75px;
+  font-size: 16px;
+  color: #fff;
+  background: #282828;
+  transition: all 0.2s ease-in;
+}
+.cart button:hover {
+  cursor: pointer;
+  background-color: #7b7b7b;
+}
+/*....... cart.......... */
+.cartPizza_parent {
+  width: 100%;
+}
+.cartPizza {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+
+.pizzaBox {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 450px;
+  gap: 10px;
+  justify-content: space-between;
+}
+.pizzaBox .type {
+  text-align: start;
+  width: 214px;
+}
+.cartLogo {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.deletCart {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #b6b6b6;
+  font-weight: normal;
+}
+.delete:hover,
+.deleteAll:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.onePizza {
+  display: flex;
+  min-height: 111px;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f4f4f4;
+  padding-top: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 80px;
+}
+
+.onePizza img {
+  width: 80px;
+}
+.cart .pizzaName {
+  display: flex;
+  width: 200px;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.pizzaName:hover {
+  cursor: pointer;
+}
+.pizzaText {
+  text-align: start;
+}
+.pizzaText .name {
+  font-size: 22px;
+}
+.pizzaText .type {
+  font-size: 16px;
+  color: #8d8d8d;
+}
+.pizzaCount {
+  display: flex;
+  gap: 10px;
+  width: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+.minus:hover,
+.plus:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.pizzaPrice {
+  font-size: 22px;
+  width: 72px;
+}
+.price_count {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 22px;
+}
+.totalPrice {
+  color: #eb5a1e;
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+button.button_left {
+  border: 1px solid #d3d3d3;
+  color: #d3d3d3;
+  background-color: #f3f3f3;
+  margin-top: 10px;
+}
+button.button_right {
+  border: 1px solid #eb5a1e;
+  color: #f3f3f3;
+  background-color: #eb5a1e;
+  margin-top: 10px;
+}
+
+/* CustomNotification start */
+
+.CustomNotification {
+  background: aqua;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  transform: translateX(240px);
+  transition: 1s;
+}
+.CustomNotification-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* CustomNotification end */
+
+@media (max-width: 890px) {
+  .pizzaBox_Parent {
+    flex-basis: 100%;
+    order: 3;
+  }
+  .modal {
+    width: 280px;
+  }
+}
+
+@media (max-width: 490px) {
+  .link {
+    order: 2;
+    width: 100%;
+  }
+  .deleteAll {
+    width: 100%;
+    text-align: end;
+  }
+  .typeCount {
+    width: 100%;
+  }
+}
